@@ -48,3 +48,13 @@ backToTopButton.addEventListener('click', (e) => {
         behavior: 'smooth'
     });
 });
+function toggleExpand(element) {
+    // Cierra cualquier tarjeta expandida antes de abrir la seleccionada
+    const expandedProduct = document.querySelector('.product.expanded');
+    if (expandedProduct && expandedProduct !== element) {
+        expandedProduct.classList.remove('expanded');
+    }
+
+    // Alterna la clase 'expanded' en la tarjeta seleccionada
+    element.classList.toggle('expanded');
+}

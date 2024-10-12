@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="product-details.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="img/logoquindioarte.jpeg" alt="Logo Arte Quindio" id="logo">
+            <h1>Arte Quindio</h1>
+        </div>
+        <!-- Botón "Volver a la tienda" -->
+        <a href="index.html" class="back-to-store">Volver a la tienda</a>
+    </header>
+
+    <main>
+        <div class="product-details-container">
+            <div class="image-gallery">
+                <div class="main-image-container">
+                    <div class="zoom-container">
+                        <img id="mainProductImage" src="" alt="Imagen principal del producto">
+                    </div>
+                </div>
+                <div class="thumbnail-container">
+                    <!-- Thumbnails will be added dynamically -->
+                </div>
+            </div>
+            <div class="product-info">
+                <h1 id="productName"></h1>
+                <p id="productDescription"></p>
+                <p><strong>Precio: $<span id="productPrice"></span></strong></p>
+                <button id="contactButton">Contactar por WhatsApp</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Arte Quindio.</p>
+            <div class="social-links">
+                <a href="https://web.facebook.com/people/Artesan%C3%ADas-Arte-Quind%C3%ADo/61567052041924/?mibextid=JRoKGi" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/artesanias_arte_quindio/profilecard/?igsh=dHpjOXl1d3RpYzE4" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="product-details.js"></script>
+</body>
+</html>

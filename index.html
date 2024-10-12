@@ -17,97 +17,50 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Artesanías en Guadua</h2>
-            <p>Piezas únicas, hechas a mano con amor por el Quindío</p>
-            <a href="#products" class="cta-button">Ver nuestros productos</a>
-        </div>
-    </section>
-
-<!-- Sección de productos -->
-<section id="products">
-    <div class="product-container">
-        <div class="product" onclick="toggleExpand(this)">
-            <img src="img/producto1.jpeg" alt="Producto 1">
-            <h2>Licorera bandeja</h2>
-            <p>$50.000</p>
-            <!-- Información adicional oculta inicialmente -->
-            <div class="product-details">
-                <p>Descripción: Bandeja de licorera hecha de guadua y madera reciclada.</p>
-                <p>Materiales: Guadua, madera reciclada.</p>
-                <p>Usos: Ideal para servir bebidas o como decoración.</p>
-                <img src="img/producto1-detail.jpeg" alt="Detalle del Producto 1">
-            </div>
-        </div>
-
-        <div class="product" onclick="toggleExpand(this)">
-            <img src="img/producto2.jpeg" alt="Producto 2">
-            <h2>Licorera media</h2>
-            <p>$70.000</p>
-            <div class="product-details">
-                <p>Descripción: Licorera de tamaño mediano para cualquier ocasión.</p>
-                <p>Materiales: Guadua, acero inoxidable.</p>
-                <p>Usos: Perfecta para servir bebidas.</p>
-                <img src="img/producto2-detail.jpeg" alt="Detalle del Producto 2">
-            </div>
-        </div>
-        <div class="product" onclick="toggleExpand(this)">
-            <img src="img/producto2.jpeg" alt="Producto 2">
-            <h2>Licorera media</h2>
-            <p>$70.000</p>
-            <div class="product-details">
-                <p>Descripción: Licorera de tamaño mediano para cualquier ocasión.</p>
-                <p>Materiales: Guadua, acero inoxidable.</p>
-                <p>Usos: Perfecta para servir bebidas.</p>
-                <img src="img/producto2-detail.jpeg" alt="Detalle del Producto 2">
-            </div>
-        </div>
-        <div class="product" onclick="toggleExpand(this)">
-            <img src="img/producto2.jpeg" alt="Producto 2">
-            <h2>Licorera media</h2>
-            <p>$70.000</p>
-            <div class="product-details">
-                <p>Descripción: Licorera de tamaño mediano para cualquier ocasión.</p>
-                <p>Materiales: Guadua, acero inoxidable.</p>
-                <p>Usos: Perfecta para servir bebidas.</p>
-                <img src="img/producto2-detail.jpeg" alt="Detalle del Producto 2">
-            </div>
-        </div>
-        <div class="product" onclick="toggleExpand(this)">
-            <img src="img/producto2.jpeg" alt="Producto 2">
-            <h2>Licorera media</h2>
-            <p>$70.000</p>
-            <div class="product-details">
-                <p>Descripción: Licorera de tamaño mediano para cualquier ocasión.</p>
-                <p>Materiales: Guadua, acero inoxidable.</p>
-                <p>Usos: Perfecta para servir bebidas.</p>
-                <img src="img/producto2-detail.jpeg" alt="Detalle del Producto 2">
-            </div>
-        </div>
-        <div class="product" onclick="toggleExpand(this)">
-            <img src="img/producto2.jpeg" alt="Producto 2">
-            <h2>Licorera media</h2>
-            <p>$70.000</p>
-            <div class="product-details">
-                <p>Descripción: Licorera de tamaño mediano para cualquier ocasión.</p>
-                <p>Materiales: Guadua, acero inoxidable.</p>
-                <p>Usos: Perfecta para servir bebidas.</p>
-                <img src="img/producto2-detail.jpeg" alt="Detalle del Producto 2">
-            </div>
-        </div>
-        <!-- Agrega más productos aquí -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Artesanías en Guadua</h2>
+        <p class="hero-subtitle">Piezas únicas hechas a mano con amor por el Quindío</p>
+        <p class="hero-description">100% quindianos, especializados en accesorios artesanales y mucho más. Encuentra las mejores artesanías de Colombia en el Quindío, hechas con técnicas tradicionales.</p>
+        <a href="#products" class="cta-button">Ver nuestros productos</a>
     </div>
 </section>
 
 
+<!-- Sección de productos -->
+<section id="products">
+    <div class="product-container">
+        <!-- Los productos se cargarán dinámicamente aquí -->
+    </div>
+    <div class="pagination">
+        <button id="prevPage" class="page-btn">Anterior</button>
+        <span id="currentPage">1</span> de <span id="totalPages">1</span>
+        <button id="nextPage" class="page-btn">Siguiente</button>
+    </div>
+</section>
+<!-- Invitación a seguir en redes sociales y contactar -->
+<section class="contact-section">
+    <div class="contact-box">
+        <h2>¿Eres un artesano o tienes un negocio?</h2>
+        <p>¡Contáctanos y expande tu negocio con nosotros!</p>
+        <a href="https://wa.me/573235460535" target="_blank" class="contact-button">Contáctanos por WhatsApp</a>
+    </div>
+    <div class="social-box">
+        <h2>Síguenos en Redes Sociales</h2>
+        <p>Conoce nuestras últimas creaciones y novedades.</p>
+        <div class="social-buttons">
+            <a href="https://web.facebook.com/people/Artesan%C3%ADas-Arte-Quind%C3%ADo/61567052041924/?mibextid=JRoKGi" target="_blank" class="social-button"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/artesanias_arte_quindio/profilecard/?igsh=dHpjOXl1d3RpYzE4" target="_blank" class="social-button"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+    </div>
+</section>
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Arte Quindio.</p>
             <div class="social-links">
-                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/artesanias_arte_quindio/profilecard/?igsh=dHpjOXl1d3RpYzE4" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/artesanias_arte_quindio/profilecard/?igsh=dHpjOXl1d3RpYzE4" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>

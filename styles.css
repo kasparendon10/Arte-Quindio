@@ -1,0 +1,309 @@
+:root {
+    --primary-color: #4a6741; /* Verde oscuro, representa la guadua */
+    --secondary-color: #d4a373; /* Marrón claro, representa la artesanía */
+    --accent-color: #faedcd; /* Beige claro, para acentos */
+    --text-color: #333; /* Casi negro, para texto principal */
+    --light-text: #fff; /* Blanco, para texto sobre fondos oscuros */
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#logo {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Hero section */
+.hero {
+    background-image: url('img/logoquindioarte.jpeg'); /* imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--light-text);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin: 0 0 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 0 0 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Productos */
+#products {
+    padding: 50px 20px;
+    background-color: var(--light-text);
+    margin-top: 20px;
+}
+
+.product-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
+}
+
+.product {
+    flex: 0 0 auto;
+    width: 250px;
+    margin-right: 20px;
+    background-color: var(--accent-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    padding: 15px;
+    scroll-snap-align: start;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.product p {
+    margin: 5px 0;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--light-text);
+    background-color: var(--secondary-color);
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Botón de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: var(--light-text);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    z-index: 1001;
+}
+
+.whatsapp-button:hover {
+    background-color: #1EBE51;
+}
+
+.whatsapp-button i {
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        background-position: center center;
+        background-attachment: fixed;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 15px;
+        justify-content: center;
+    }
+}
+/* Botón "Volver arriba" */
+.back-to-top {
+    position: fixed;
+    bottom: 120px; /* Justo encima del botón de WhatsApp */
+    right: 20px;
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    z-index: 1001;
+}
+
+.back-to-top:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.back-to-top i {
+    margin: 0;
+}

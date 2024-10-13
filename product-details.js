@@ -1,3 +1,19 @@
+// Simulación de datos de productos (puedes reutilizar el mismo array de la página principal)
+const products = [
+    { name: 'Cafetera', image: 'img/CAFETERA.jpeg', description: 'Coladera tradicional para Cafe', price:65000},
+    { name: 'Lampara Caperuza pequeña', image: 'img/LAMPARACAPERUZAPEQUEÑA.jpeg', description: 'Lampara caperuza ideal para decoracion o mesa de noche', price: 85000 },
+    { name: 'Licorera Lazo', image: 'img/LICORERALAZO.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 50000 },
+    { name: 'Licorera bandeja', image: 'img/LICORERABANDEJA.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 75000},
+    { name: 'Licorera Carretilla', image: 'img/LICORERACARRETILLA.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 70000 },
+    { name: 'Licorera Puntilla', image: 'img/LICORERAPUNTILLA.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 60000 },
+    { name: 'Licorera Triciclo', image: 'img/LICORERATRICICLO.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 105000 },
+    { name: 'Licorera Vaiven', image: 'img/LICORERAVAIVEN.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 85000 },
+    { name: 'Cerdo Alcancia', image: 'img/CERDOALCANCIA.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 50000 },
+    { name: 'Vaso Cervecero', image: 'img/VASOCERVECERO.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 30000 },
+    { name: 'Pevetero', image: 'img/PEBETERO.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 35000 },
+    { name: 'Portallavez', image: 'img/PORTALLAVEZ.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 35000 }
+];
+
 // Cargar los datos del producto desde localStorage
 const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
 
@@ -70,7 +86,7 @@ document.getElementById('contactButton').addEventListener('click', function(even
 
     // Opcionalmente, puedes incluir el nombre del producto en el mensaje
     const productName = selectedProduct.name;
-    const message = encodeURIComponent(`Hola, estoy interesado en el producto: ${productName}`);
+    const message = encodeURIComponent(`Hola, estoy interesado en el producto: ${productName}podrias darme mas informacion?`);
 
     if (isMobile) {
         window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
@@ -78,3 +94,35 @@ document.getElementById('contactButton').addEventListener('click', function(even
         window.location.href = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
     }
 });
+// Función para obtener productos relacionados (puedes filtrar por categoría, aquí usaremos aleatorios)
+function getRelatedProducts(currentProduct) {
+    return products
+        .filter(product => product.name !== currentProduct.name) // Excluir el producto actual
+        .sort(() => 0.5 - Math.random()) // Ordenar aleatoriamente
+        .slice(0, 4); // Mostrar un máximo de 4 productos relacionados
+}
+// Función para renderizar productos relacionados
+function renderRelatedProducts() {
+    const relatedProductsContainer = document.querySelector('.related-products-container');
+    const relatedProducts = getRelatedProducts(selectedProduct);
+    
+    relatedProducts.forEach(product => {
+        const productElement = document.createElement('div');
+        productElement.className = 'related-product';
+        productElement.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>$${product.price.toLocaleString()}</p>
+            <a href="product-details.html" onclick="redirectToDetails('${product.name}', '${product.image}', '${product.description}', ${product.price})">Ver más</a>
+        `;
+        relatedProductsContainer.appendChild(productElement);
+    });
+}
+
+// Llamar a la función para mostrar productos relacionados
+renderRelatedProducts();
+function redirectToDetails(name, image, description, price) {
+    const productData = { name, image, description, price };
+    localStorage.setItem('selectedProduct', JSON.stringify(productData));
+    window.location.href = 'product-details.html';
+}

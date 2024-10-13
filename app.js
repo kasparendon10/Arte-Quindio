@@ -1,12 +1,18 @@
 // Datos de ejemplo para los productos
 const products = [
-    { name: 'Licorera bandeja', image: 'img/producto1.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 50000 },
-    { name: 'Licorera bandeja', image: 'img/producto1.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 50000 },
-    { name: 'Licorera bandeja', image: 'img/producto1.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 50000 },
-    { name: 'Licorera bandeja', image: 'img/producto1.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 50000 },
-    { name: 'Licorera bandeja', image: 'img/producto1.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 50000 },
-    { name: 'Licorera bandeja', image: 'img/producto1.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 50000 },
-    { name: 'Licorera bandeja', image: 'img/producto1.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 50000 },
+    { name: 'Cafetera', image: 'img/CAFETERA.jpeg', description: 'Coladera tradicional para Cafe', price:65000},
+    { name: 'Lampara Caperuza pequeña', image: 'img/LAMPARACAPERUZAPEQUEÑA.jpeg', description: 'Lampara caperuza ideal para decoracion o mesa de noche', price: 85000 },
+    { name: 'Licorera Lazo', image: 'img/LICORERALAZO.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 50000 },
+    { name: 'Licorera bandeja', image: 'img/LICORERABANDEJA.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 75000},
+    { name: 'Licorera Carretilla', image: 'img/LICORERACARRETILLA.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 70000 },
+    { name: 'Licorera Puntilla', image: 'img/LICORERAPUNTILLA.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 60000 },
+    { name: 'Licorera Triciclo', image: 'img/LICORERATRICICLO.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 105000 },
+    { name: 'Licorera Vaiven', image: 'img/LICORERAVAIVEN.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 85000 },
+    { name: 'Cerdo Alcancia', image: 'img/CERDOALCANCIA.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 50000 },
+    { name: 'Vaso Cervecero', image: 'img/VASOCERVECERO.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 30000 },
+    { name: 'Pevetero', image: 'img/PEBETERO.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 35000 },
+    { name: 'Portallavez', image: 'img/PORTALLAVEZ.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 35000 },
+   
     // Añade más productos aquí...
 ];
 
@@ -137,3 +143,25 @@ function toggleExpand(element) {
     // Alterna la clase 'expanded' en la tarjeta seleccionada
     element.classList.toggle('expanded');
 }
+  
+// Calendario de Eventos
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      events: [
+        {
+          title: 'Feria Artesanal - Diciembre',
+          start: '2024-12-10',
+          end: '2024-12-15'
+        },
+        {
+          title: 'Feria Artesanal - Semana Santa',
+          start: '2024-04-08',
+          end: '2024-04-12'
+        }
+        // Añade más eventos aquí
+      ]
+    });
+    calendar.render();
+  });

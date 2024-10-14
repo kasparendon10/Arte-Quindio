@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arte Quindio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.min.css' rel='stylesheet' />
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,7 +18,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+  <!-- Hero Section --> 
 <section class="hero">
     <div class="hero-content">
         <h2>Artesanías en Guadua</h2>
@@ -27,38 +28,42 @@
     </div>
 </section>
 
-
 <!-- Sección de productos -->
 <section id="products">
-    <div class="product-container">
-        <!-- Los productos se cargarán dinámicamente aquí -->
-    </div>
-    <div class="pagination">
-        <button id="prevPage" class="page-btn">Anterior</button>
-        <span id="currentPage">1</span> de <span id="totalPages">1</span>
-        <button id="nextPage" class="page-btn">Siguiente</button>
-    </div>
-</section>
-<!-- Invitación a seguir en redes sociales y contactar -->
-<section class="contact-section">
-    <div class="contact-box">
-        <h2>¿Eres un artesano o tienes un negocio?</h2>
-        <p>¡Contáctanos y expande tu negocio con nosotros!</p>
-        <a href="https://wa.me/573235460535" target="_blank" class="contact-button">Contáctanos por WhatsApp</a>
-    </div>
-    <div class="social-box">
-        <h2>Síguenos en Redes Sociales</h2>
-        <p>Conoce nuestras últimas creaciones y novedades.</p>
-        <div class="social-buttons">
-            <a href="https://web.facebook.com/people/Artesan%C3%ADas-Arte-Quind%C3%ADo/61567052041924/?mibextid=JRoKGi" target="_blank" class="social-button"><i class="fab fa-facebook"></i> Facebook</a>
-            <a href="https://www.instagram.com/artesanias_arte_quindio/profilecard/?igsh=dHpjOXl1d3RpYzE4" target="_blank" class="social-button"><i class="fab fa-instagram"></i> Instagram</a>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Los productos se cargarán dinámicamente aquí -->
         </div>
+        <!-- Controles de navegación del slider -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- Paginación del slider -->
+        <div class="swiper-pagination"></div>
     </div>
 </section>
-<section id="events-calendar">
-    <h2>Próximos Eventos y Ferias</h2>
-    <div id="calendar"></div>
-</section>
+
+    <!-- Invitación a seguir en redes sociales y contactar -->
+    <section class="contact-section">
+        <div class="contact-box">
+            <h2>¿Eres un artesano o tienes un negocio?</h2>
+            <p>¡Contáctanos y expande tu negocio con nosotros!</p>
+            <a href="https://wa.me/573235460535" target="_blank" class="contact-button">Contáctanos por WhatsApp</a>
+        </div>
+        <div class="social-box">
+            <h2>Síguenos en Redes Sociales</h2>
+            <p>Conoce nuestras últimas creaciones y novedades.</p>
+            <div class="social-buttons">
+                <a href="https://web.facebook.com/people/Artesan%C3%ADas-Arte-Quind%C3%ADo/61567052041924/?mibextid=JRoKGi" target="_blank" class="social-button"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/artesanias_arte_quindio/profilecard/?igsh=dHpjOXl1d3RpYzE4" target="_blank" class="social-button"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendario de eventos -->
+    <section id="events-calendar">
+        <h2>Próximos Eventos y Ferias</h2>
+        <div id="calendar"></div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -75,10 +80,12 @@
     <a href="https://wa.me/573235460535" class="whatsapp-button" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- Botón "Volver arriba" -->
-<a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
-    <script src="app.js"></script>
+    <!-- Botón "Volver arriba" -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.min.js'></script>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -1,20 +1,175 @@
 // Datos de ejemplo para los productos
 const products = [
-    { name: 'Cafetera', image: 'img/CAFETERA.jpeg', description: 'Coladera tradicional para Cafe', price: 65000 },
-    { name: 'Lampara Caperuza pequeña', image: 'img/LAMPARACAPERUZAPEQUEÑA.jpeg', description: 'Lampara caperuza ideal para decoracion o mesa de noche', price: 85000 },
-    { name: 'Licorera bandeja', image: 'img/LICORERABANDEJA.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 75000 },
-    { name: 'Licorera Carretilla', image: 'img/LICORERACARRETILLA.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 70000 },
-    { name: 'Licorera Puntilla', image: 'img/LICORERAPUNTILLA.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 60000 },
-    { name: 'Licorera Triciclo', image: 'img/LICORERATRICICLO.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 105000 },
-    { name: 'Licorera Vaiven', image: 'img/LICORERAVAIVEN.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 85000 },
-    { name: 'Cerdo Alcancia', image: 'img/CERDOALCANCIA.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 50000 },
-    { name: 'Vaso Cervecero', image: 'img/VASOCERVECERO.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 30000 },
-    { name: 'Pevetero', image: 'img/PEBETERO.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 35000 },
-    { name: 'Portallavez', image: 'img/PORTALLAVEZ.jpeg', description: 'Bandeja de licorera hecha de guadua y madera reciclada.', price: 35000 },
-    // Añade más productos aquí...
+    { 
+        name: 'Cafetera', 
+        image: 'img/CAFETERA.jpeg', 
+        thumbnails: [], 
+        description: 'Coladera tradicional para Cafe', 
+        price: 65000 
+    },
+    { 
+        name: 'Cerdo Alcancia', 
+        image: 'img/CERDOALCANCIA.jpeg', 
+        thumbnails: [
+            'img/CERDOALCANCIA1.jpeg',
+            'img/CERDOALCANCIA2.jpeg',
+            'img/CERDOALCANCIA3.jpeg',
+        ], 
+        description: 'Coladera tradicional para Cafe', 
+        price: 65000 
+    },
+    { 
+        name: 'Lampara Caperuza pequeña', 
+        image: 'img/LAMPARACAPERUZAPEQUEÑA.jpeg', 
+        thumbnails: [
+            'img/LAMPARACAPERUZA1.jpeg.jpeg',
+            'img/LAMPARACAPERUZA2.jpeg',
+            'img/LAMAPRACAPERUZA3.jpeg',
+        ],
+        description: 'Lampara caperuza ideal para decoracion o mesa de noche', 
+        price: 85000 
+    },
+    { 
+        name: 'Licorera bandeja', 
+        image: 'img/LICORERABANDEJA.jpeg', 
+        thumbnails: ['img/LICORERABANDEJA.jpeg'],
+        description: 'Bandeja de licorera hecha de guadua y madera reciclada.', 
+        price: 75000
+    },
+    { 
+        name: 'Licorera Carretilla', 
+        image: 'img/LICORERACARRETILLA.jpeg',thumbnails: [
+            'img/LICORERACARRETILLA1.jpeg',
+            'img/LICORERACARRETILLA2.jpeg',
+        ], 
+        description: 'Bandeja de licorera hecha de guadua y madera reciclada.', 
+        price: 70000 
+    },
+    { 
+        name: 'Licorera Puntilla', 
+        image: 'img/LICORERAPUNTILLA.jpeg', thumbnails: [
+            'img/LICORERACARRETILLA1.jpeg',
+            'img/LICORERAPUNTILLA3.jpeg',
+            'img/LICORERAPUNTILLA4.jpeg',
+        ], 
+        description: 'Bandeja de licorera hecha de guadua y madera reciclada.', 
+        price: 60000 
+    },
+    { 
+        name: 'Licorera Triciclo', 
+        image: 'img/LICORERATRICICLO.jpeg', 
+        thumbnails: [
+            'img/LICORERATRICICLO2.jpeg',
+            'img/LICORERATRICICLO3.jpeg',
+            'img/LICORERATRICICLO3.jpeg',
+            'img/LICORERATRICICLO4.jpeg',
+        ],
+        description: 'Portallaves decorativo hecho de guadua', 
+        price: 35000 
+    },
+    { 
+        name: 'Licorera Vaiven', 
+        image: 'img/LICORERAVAIVEN.jpeg', 
+        thumbnails: ['img/LICORERAVAIVEN.jpeg'],
+        description: 'Bandeja de licorera hecha de guadua y madera reciclada.', 
+        price: 85000 
+    },
+    { 
+        name: 'Vaso Cervecero', 
+        image: 'img/VASOCERVECERO.jpeg', 
+        thumbnails: [
+            'img/VASOCERVECERO2.jpeg'
+        ],
+        description: 'Vaso cervecero artesanal hecho de guadua', 
+        price: 30000 
+    },
+    { 
+        name: 'Pevetero', 
+        image: 'img/PEBETERO.jpeg', 
+        thumbnails: [
+            'img/PEBETERO.jpeg',
+            'img/PEVETERO1.jpeg'
+        ],
+        description: 'Pebetero artesanal para inciensos', 
+        price: 35000 
+    },
+    { 
+        name: 'Portallavez', 
+        image: 'img/PORTALLAVEZ.jpeg', 
+        thumbnails: [
+            'img/PORTALLAVEZ1.jpeg',
+            'img/PORTALLAVEZ2.jpeg',
+        ],
+        description: 'Portallaves decorativo hecho de guadua', 
+        price: 35000 
+    },
+    { 
+        name: 'Alcancia Cilindro', 
+        image: 'img/ALCANCIACILINDRO.jpeg', 
+        thumbnails: [
+            'img/ALCANCIACILINDRO2.jpeg',
+            'img/ALCANCIACILINDRO3.jpeg',
+        ],
+        description: 'Portallaves decorativo hecho de guadua', 
+        price: 35000 
+    },
+    { 
+        name: 'Candelabro', 
+        image: 'img/CANDELABRO.jpeg', 
+        thumbnails: [
+            'img/CANDELABRO1.jpeg',
+            'img/CANDELABRO2.jpeg',
+        ],
+        description: 'Portallaves decorativo hecho de guadua', 
+        price: 35000 
+    },
+    { 
+        name: 'Cofre', 
+        image: 'img/COFRE.jpeg', 
+        thumbnails: [
+            'img/COFRE1.jpeg',
+            'img/COFRE2.jpeg',
+            'img/COFRE3.jpeg',
+            'img/COFRE4.jpeg',
+        ],
+        description: 'Portallaves decorativo hecho de guadua', 
+        price: 35000 
+    },
+    { 
+        name: 'Licorera', 
+        image: 'img/LICORERA.jpeg', 
+        thumbnails: [
+            'img/LICORERA2.jpeg',
+            'img/LICORERA3.jpeg',
+            'img/LICORERA4.jpeg',
+        ],
+        description: 'Portallaves decorativo hecho de guadua', 
+        price: 35000 
+    },
+    { 
+        name: 'Licorera Pincelada', 
+        image: 'img/LICORERAPINCELADA.jpeg', 
+        thumbnails: [
+            'img/LICORERAPINCELADA2.jpeg',
+            'img/LICORERAPINCELADA3.jpeg',
+            'img/LICORERAPINCELADA4.jpeg',
+            'img/LICORERAPINCELADA5.jpeg',
+        ],
+        description: 'Portallaves decorativo hecho de guadua', 
+        price: 35000 
+    },
+    { 
+        name: 'Saleros', 
+        image: 'img/SALERO.jpeg', 
+        thumbnails: [
+            'img/SALERO2.jpeg',
+            'img/SALERO3.jpeg',
+        ],
+        description: 'Portallaves decorativo hecho de guadua', 
+        price: 35000 
+    },
 ];
-
-const productsPerPage = 12; // Número de productos por página
+const productsPerPage = 30; // Número de productos por página
 let currentPage = 1;
 
 // Función para mostrar productos en el slider
@@ -96,6 +251,31 @@ document.querySelector('.whatsapp-button').addEventListener('click', function(ev
         window.location.href = `https://web.whatsapp.com/send?phone=${phoneNumber}`;
     }
 });
+//Hero efecto
+const hero = document.getElementById('hero');
+const images = [
+    'url("img/logoquindioarte.jpeg")',
+    'url("img/ART2.jpeg")',
+    'url("img/CANDELABRO2.jpeg")',  // Reemplaza con las rutas correctas
+    'url("img/ARTESANO.jpeg")',
+    'url("img/LICORERACARRETILLA1.jpeg")',
+    'url("img/fondo1.jpeg")',
+    'url("img/LICORERAPUNTILLA4.jpeg")',
+    'url("img/fondo2.jpeg")',
+    'url("img/LICORERATRICICLO4.jpeg")',
+    'url("img/fondo3.jpeg")', 
+    'url("img/LAMPARACAPERUZA1.jpeg")',
+    'url("img/fondo4.jpeg")',  // Puedes añadir más imágenes
+];
+
+let currentIndex = 0;
+
+function changeBackground() {
+    hero.style.backgroundImage = images[currentIndex];
+    currentIndex = (currentIndex + 1) % images.length;
+}
+
+setInterval(changeBackground, 3000); // Cambia cada 2 segundos
 
 // Mostrar/ocultar el botón "Volver arriba"
 const backToTopButton = document.querySelector('.back-to-top');
